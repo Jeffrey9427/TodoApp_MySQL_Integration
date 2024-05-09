@@ -1,0 +1,72 @@
+.header {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.list li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.list li label {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 0.25rem; */
+    cursor: pointer;
+    align-items: center;
+}
+
+.list li label::before {
+    content: "";
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    background: hsl(257, 100%, 91%);
+    border-radius: 0.25em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list li label:hover::before {
+    background: hsl(258, 95%, 83%);
+}
+
+.list li input[type="checkbox"] {
+    display: none;
+}
+
+.list li:has(input:focus-visible) label {
+    outline: 1px solid hsl(257, 48%, 49%);
+}
+
+.list li:has(input:checked) label {
+    color: hsl(200, 20%, 40%);
+}
+
+.list li:has(input:checked) label div {
+    text-decoration: line-through;
+}
+
+.list li:has(input:checked) label::before {
+    content: "✔";
+    background: hsl(257, 100%, 67%);
+    color: hsl(0, 0%, 100%);
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.list li:has(input:checked) label:hover::before {
+    background: hsl(257, 100%, 67%);
+}

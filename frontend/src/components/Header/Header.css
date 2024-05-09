@@ -1,0 +1,16 @@
+.app-header {
+    --colors-text: #fff;
+    color: var(--colors-text);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.app-logo {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    cursor: default;
+    user-select: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
